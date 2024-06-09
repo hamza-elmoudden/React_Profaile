@@ -20,7 +20,7 @@ export const Contacet = () => {
   
   return (
     <>
-      <Navbar skill={skill} certifi={Certifi} project={Project}/>
+      <Navbar nev={"contacte"} skill={skill} certifi={Certifi} project={Project}/>
       <SecContacte navup={navup}/>
       <div className="w-full h-2 bg-[#09101a]"></div>
       <Crafting navup={navup}/>

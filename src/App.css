@@ -27,6 +27,16 @@ body{
     right: 0;
 }
 
+
+
+.hov:hover .bar{
+    width: 100%;
+    transition: 0.5s;
+    
+}
+
+
+
 @media (max-width:1280px){
     .secte{
         flex-direction: column;

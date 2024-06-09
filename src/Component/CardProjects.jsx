@@ -12,7 +12,7 @@ export const CardProjects = ({pro}) => {
         window.open(`${pro.view}`, '_blank');
     };
 
-    console.log("image:",pro ? pro.title : "")
+    console.log("image:", pro.mainImage.asset._ref)
   return (
     <>
     <section className="w-full md:min-w-1/3 h-[45rem] p-5  border border-spacing-1  flex flex-col gap-8 rounded-lg">

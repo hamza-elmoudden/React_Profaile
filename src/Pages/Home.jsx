@@ -21,7 +21,7 @@ export const Home = () => {
 
   return (
     <>
-      <Navbar skill={skill} certifi={Certifi} project={Project}/>
+      <Navbar nev={"home"} skill={skill} certifi={Certifi} project={Project}/>
       <Section navup={navup}/>
       <Crafting navup={navup}/>
       <Skill skill={skill}/>

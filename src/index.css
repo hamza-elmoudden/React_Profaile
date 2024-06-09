@@ -16,3 +16,20 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(27, 40, 58);
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7ea3da;
+  border-radius: 100vw;
+}
