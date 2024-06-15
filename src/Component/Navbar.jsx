@@ -18,8 +18,8 @@ export const Navbar = ({skill,project,certifi,nev}) => {
   
   return (
     <>
-      <motion.section className="fixed w-full z-50 top-[-10rem]"  animate={{top:0}} transition={{duration:0.6}}>
-        <div className=" container mx-auto bg-[#09101a] ">
+      <motion.section className="fixed w-full z-50  top-[-10rem]"  animate={{top:0}} transition={{duration:0.6}}>
+        <div className="bg-[#09101a] container mx-auto">
           <nav className='flex justify-between items-center'>
             <div className="flex gap-8 items-center">
               <div className="w-24 h-24 bg-blue-500 flex items-center justify-center overflow-hidden">

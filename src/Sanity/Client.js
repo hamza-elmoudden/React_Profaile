@@ -7,6 +7,7 @@ export const client = createClient({
         projectId:"eleqv5de",
         dataset: "production",
         useCdn: true,
+
 })
 
 

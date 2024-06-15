@@ -20,7 +20,7 @@ export const Section = ({navup}) => {
  
   return (
     <>
-    <section ref={navup} className="secte min-h-[100vh]  flex items-center gap-10  md:flex-row flex-col pt-36 seimg px-10 py-10 relative z-40">
+    <section ref={navup} className="secte min-h-[100vh]  flex items-center gap-10  md:flex-row flex-col pt-36 seimg px-10 py-10 relative z-40 w-full">
         <div className="wfull md:w-1/2 w-full flex items-center p-20 flex-col">
           <div>
             <motion.img animate={{width:"18rem",height:"18rem"}} transition={{duration:1,delay:0.9}} className="w-[0rem] h-[0rem]" src={require("../image/Animation - 1716896686567.gif")} alt="" />
