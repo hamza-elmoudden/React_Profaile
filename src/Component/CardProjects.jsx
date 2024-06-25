@@ -23,11 +23,11 @@ export const CardProjects = ({pro}) => {
         <div className='h-[30rem] w-full overflow-hidden'>
             <img src={urlFor(pro.mainImage.asset._ref)} className='rounded-lg w-full h-full  transition duration-300 transform hover:scale-125 z-30' alt="Card" />
         </div>
-        <div className="flex py-1 px-5 justify-between">
-            <div className=" cursor-pointer py-4 px-5 rounded-xl bg-blue-500 uppercase font-bold hover:text-green-500 hover:bg-white" onClick={githup}>
+        <div className="flex py-1 px-5 justify-between md:flex-row flex-col gap-4 items-center">
+            <div className="left-0 cursor-pointer py-4 px-5 rounded-xl bg-blue-500 uppercase font-bold hover:text-green-500 hover:bg-white w-fit" onClick={githup}>
                 <a>Show Code In githup</a>
             </div>
-            <div className=" cursor-pointer py-4 px-5 rounded-xl bg-blue-500 uppercase font-bold hover:text-green-500 hover:bg-white" onClick={live}>
+            <div className="right-0 cursor-pointer py-4 px-5 rounded-xl bg-blue-500 uppercase font-bold hover:text-green-500 hover:bg-white w-fit" onClick={live}>
                 <a>Show Live</a>
             </div>
         </div>
