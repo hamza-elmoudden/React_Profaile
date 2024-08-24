@@ -1,0 +1,21 @@
+.mySwiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px; /* Adjust width to match the SwiperSlide size */
+    height: 500px; /* Adjust height if needed */
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.swiper-pagination {
+    margin-bottom: -13px !important;
+}

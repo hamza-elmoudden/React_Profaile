@@ -23,17 +23,19 @@ export const Crafting = ({navup}) => {
         }
 
     },[scroll,isInView,mainControls])
+    
   return (
     <>
-        <section className="py-20 container mx-auto z-20 relative">
+    <section className='py-20 bg-black'>
+        <div className="md:container w-[90%] mx-auto z-20 relative">
             <div className="flex flex-col items-center gap-32 overflow-hidden py-10"> 
-                <div className="w-1/2 flex flex-col gap-4">
-                    <h2 className="text-2xl uppercase font-bold text-center">My service</h2>
-                    <h2 className="text-5xl uppercase font-bold  text-center" >Crafting stories thorough design and innovation</h2>
+                <div className="w-full flex flex-col gap-4">
+                    <h2 className="text-2xl uppercase font-bold text-center">My <span className="text-red-500">service</span> </h2>
+                    <h2 className="text-3xl uppercase font-bold  text-center" >Crafting stories through design and innovation</h2>
                 </div>
                 <div className="flex gap-28 items-center justify-center flex-wrap md:flex-row flex-col" ref={crad}>
                     <motion.div variants={{start:{bottom:-1000},end:{bottom:20}}} initial="start" transition={{duration:0.8,delay: 0.2, ease: "easeInOut"}} animate={mainControls}   className="wfull md:w-[35rem] w-full py-20 px-16 border border-spacing-1  rounded-lg hover:shadow-lg hover:shadow-white cursor-pointer relative">
-                        <div className=" text-8xl text-blue-400 absolute top-[-5rem] right-1/2 translate-x-1/2">
+                        <div className=" text-8xl text-red-500 absolute top-[-5rem] right-1/2 translate-x-1/2">
                             <FontAwesomeIcon icon={faCrown} />
                         </div>
                         <div className="space-y-8 text-center">
@@ -42,7 +44,7 @@ export const Crafting = ({navup}) => {
                         </div>
                     </motion.div>
                     <motion.div variants={{start:{bottom:-1000},end:{bottom:20}}} initial="start" transition={{duration:0.8,delay: 0.6, ease: "easeInOut"}} animate={mainControls} className="wfull md:w-[35rem] w-full py-20 px-16 border border-spacing-1 relative rounded-lg hover:shadow-lg hover:shadow-white cursor-pointer">
-                        <div className=" text-8xl text-blue-400 absolute top-[-5rem] right-1/2 translate-x-1/2">
+                        <div className=" text-8xl text-red-500 absolute top-[-5rem] right-1/2 translate-x-1/2">
                             <FontAwesomeIcon icon={faCode} />
                         </div>
                         <div className="space-y-8 text-center">
@@ -53,9 +55,10 @@ export const Crafting = ({navup}) => {
                 </div>
                 </div>
                 <div className="fixed bottom-0 right-0 md:right-10 transform -translate-y-1/2 z-30 p-8" >
-                        <FontAwesomeIcon  className=" text-4xl p-5 border border-spacing-1 rounded-full hover:bg-blue-600 cursor-pointer" icon={faHandPointUp} onClick={()=>navup.current.scrollIntoView({ behavior: 'smooth'})} />
+                        <FontAwesomeIcon  className=" text-4xl p-5 border border-spacing-1 rounded-full hover:bg-red-600 cursor-pointer" icon={faHandPointUp} onClick={()=>navup.current.scrollIntoView({ behavior: 'smooth'})} />
                 </div>
-        </section>
+        </div>
+    </section>
     </>
   )
 }

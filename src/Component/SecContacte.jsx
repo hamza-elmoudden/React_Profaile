@@ -1,20 +1,11 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub,faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 import Swal from "sweetalert2"
 import {client} from "../Sanity/Client"
 
 
 
-export const SecContacte = ({navup}) => {
+export const SecContacte = ({contect}) => {
 
-    const githup = ()=>{
-        window.open('https://github.com/hamza-elmoudden' , '_blank')
-    }
-
-    const linkdin = ()=>{
-        window.open('https://www.linkedin.com/in/hamza-elmouddane-08a140296/?originalSubdomain=ma' , '_blank')
-    }
 
     const [forem,setforem] = useState({
         name:"",
@@ -65,33 +56,26 @@ export const SecContacte = ({navup}) => {
 
   return (
     <>
-    <section ref={navup} className="pt-40 z-40 relative  bg-[#0d182b]" >
-        <div className=' container mx-auto'>
-            <div className="py-10 flex gap-10 justify-center">
-                    <a className="cursor-pointer" href="#" onClick={githup}>
-                        <FontAwesomeIcon className="text-6xl p-3 bg-green-400 rounded-full" icon={faGithub} />
-                    </a>
-                    <a className="cursor-pointer" href="#" onClick={linkdin}>
-                        <FontAwesomeIcon className="text-6xl p-3 bg-blue-500 rounded-full" icon={faLinkedin} />
-                    </a>
-            </div>
-            <div className="text-center">
-                <h3 className="text-6xl uppercase font-bold">Contacte</h3>
+    <section  className="pt-40  relative  bg-black" ref={contect}>
+      <div className="w-full h-[2px] bg-red-600"></div>
+        <div className='md:container w-[90%] mx-auto pt-10'>
+            <div className="text-center" >
+                <h3 className="text-6xl uppercase font-bold text-red-500">Contacte</h3>
             </div>
             <div className="py-10">
-                <form action="" className="flex flex-col gap-10" onSubmit={handelsubmit}>
+                <form  className="flex flex-col gap-10 text-[#9e9e9e]" onSubmit={handelsubmit}>
                     <div className="grid md:grid-cols-2 grid-cols-1 gap-10">
-                        <input placeholder="Name" name="name" value={forem.name} onChange={handelform} className="outline-none text-2xl text-black py-3 px-6 w-full rounded-lg" type="text" />
-                        <input placeholder="Email" name="email" value={forem.email}  onChange={handelform} className="outline-none text-2xl text-black py-3 px-6 w-full rounded-lg" type="text" />
+                        <input placeholder="Name" name="name" value={forem.name} onChange={handelform} className="outline-none text-2xl  py-3 px-6 w-full bg-[#131313]" type="text" />
+                        <input placeholder="Email" name="email" value={forem.email}  onChange={handelform} className="outline-none text-2xl  py-3 px-6 w-full bg-[#131313]" type="text" />
                     </div>
                     <div className="grid grid-cols-1">
-                        <input placeholder="Title" name="title" value={forem.title}  onChange={handelform} className="outline-none text-2xl text-black py-3 px-6 w-full rounded-lg" type="text" />
+                        <input placeholder="Title" name="title" value={forem.title}  onChange={handelform} className="outline-none text-2xl py-3 px-6 w-full bg-[#131313]" type="text" />
                     </div>
                     <div className="grid grid-cols-1 ">
-                        <input placeholder="Description" name='description' value={forem.description}  onChange={handelform} className="outline-none text-2xl text-black py-3 px-6 w-full rounded-lg h-[30rem]" type="text" />
+                        <textarea placeholder="Description" name='description' value={forem.description}  onChange={handelform} rows="10" id="content" className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#131313] leading-tight focus:outline-none focus:shadow-outline" type="text" />
                     </div>
                     <div className="flex justify-center">
-                        <button className="text-2xl uppercase font-bold px-10 py-5 bg-blue-500 rounded-lg hover:text-green-500 hover:bg-white" type="submit">Submit</button>
+                        <button className="text-2xl uppercase font-bold px-10 py-5 text-white bg-red-500  hover:text-red-500 hover:bg-white" type="submit">Submit</button>
                     </div>
                 </form>
             </div>
@@ -100,3 +84,4 @@ export const SecContacte = ({navup}) => {
     </>
   )
 }
+

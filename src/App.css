@@ -5,14 +5,21 @@ body{
 }
 
 /* #09101a */
-
-.seimg{
+.seimg,
+.do{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: url("./image/banner.jpg");
 }
 
+.seimg{
+    background-image: url("./image/banner-2.jpg");
+}
+
+
+.do{
+    background-image: url("./image/slide-02.jpg");
+}
 
 .carousel-item-padding-10 {
     padding: 0 10px; 
@@ -34,6 +41,7 @@ body{
     transition: 0.5s;
     
 }
+
 
 
 

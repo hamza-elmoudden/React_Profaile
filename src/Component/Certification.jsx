@@ -49,10 +49,10 @@ export const Certification = ({certifi}) => {
 
   return (
     <>
-    <section className="py-32 bg-[#09101a]" ref={certifi}>
+    <section className="py-32 bg-black" ref={certifi}>
         <div className="container mx-auto flex flex-col gap-16" ref={crad}>
             <div className="text-center">
-                <h1 className="text-5xl uppercase font-bold">My <span className="text-blue-600">Certification</span><span> {certification.length}</span></h1>
+                <h1 className="text-5xl uppercase font-bold">My <span className="text-red-600">Certification</span><span> {certification.length}</span></h1>
             </div>
             <motion.div animate={mainControls} variants={{start:{left:-2000},end:{left:0}}} initial="start" transition={{duration:0.8, ease: "easeInOut"}} className="slider-container relative">
                <Carousel
@@ -65,26 +65,14 @@ export const Certification = ({certifi}) => {
                           {
                               certification.map((certi, index) => {
                                   return (
-                                      <div key={certi._id} className="wfull md:min-w-1/3 h-[15rem] duration-500 group overflow-hidden relative  bg-neutral-800 text-neutral-50 flex flex-col justify-around px-5 rounded-xl" >
-                                          <div
-                                              className="absolute blur duration-500 group-hover:blur-none w-72 h-72 rounded-full group-hover:translate-x-12 group-hover:translate-y-12 bg-sky-900 right-1 -bottom-24"
-                                          ></div>
-                                          <div
-                                              className="absolute blur duration-500 group-hover:blur-none w-12 h-12 rounded-full group-hover:translate-x-12 group-hover:translate-y-2 bg-indigo-700 right-12 bottom-12"
-                                          ></div>
-                                          <div
-                                              className="absolute blur duration-500 group-hover:blur-none w-36 h-36 rounded-full group-hover:translate-x-12 group-hover:-translate-y-12 bg-indigo-800 right-1 -top-12"
-                                          ></div>
-                                          <div
-                                              className="absolute blur duration-500 group-hover:blur-none w-24 h-24 bg-sky-700 rounded-full group-hover:-translate-x-12"
-                                          ></div>
-                                          <div className="z-10 flex flex-col justify-evenly w-full h-full">
-                                              <span className="text-3xl font-bold capitalize">{certification ? certi.title : "certification"}</span>
-                                              <button
-                                                  className="hover:bg-neutral-200 bg-neutral-50 rounded text-blue-800 font-extrabold w-full p-3 text-xl uppercase"
-                                              >
-                                                  {certification ? certi.company : "Cousera"}
-                                              </button>
+                                      <div key={certi._id} className="wfull md:min-w-1/3  duration-500 group overflow-hidden relative bg-black border border-spacing-8 border-red-500 text-neutral-50 flex flex-col justify-around rounded-xl hover:text-red-500" >
+                                          <div className="w-full h-[25rem]">
+                                            <img className='w-full h-full' src={require("../image/coursera.png")} alt={certi.title && "card"} />
+                                          </div>
+                                          <div className="w-full h-[7rem] py-6 text-center ">
+                                            <div>
+                                                <span className="text-3xl font-bold capitalize">{certification ? certi.title : "certification"}</span>
+                                            </div>
                                           </div>
                                       </div>
                                   )
@@ -97,5 +85,4 @@ export const Certification = ({certifi}) => {
     </>
   )
 }
-
 

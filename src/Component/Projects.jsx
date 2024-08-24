@@ -1,11 +1,20 @@
 import { CardProjects } from "./CardProjects";
 import Carousel from "react-multi-carousel";
+
+import "./Projects.css"
 import "react-multi-carousel/lib/styles.css";
 import { useSelector } from 'react-redux'
+import {SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
 
 
 
-export const Projects = ({project}) => {
+
+
+export const Projects = ({ project }) => {
 
   const responsive = {
     superLargeDesktop: {
@@ -32,28 +41,34 @@ export const Projects = ({project}) => {
 
   return (
     <>
-    <section className="py-20" ref={project}>
-      <div className="py-10 text-center">
-         <h3 className="md:text-6xl text-3xl uppercase font-bold">MY Projects <span className="text-blue-500">{projects.length}</span></h3>
-      </div>
-      <div className="container mx-auto flex items-center gap-3 flex-wrap justify-center">
-        <Carousel 
+      <section className="py-20" ref={project}>
+       <div className="md:container w-[94%] mx-auto">
+       <div className="py-10 text-center">
+          <h3 className="md:text-6xl text-3xl uppercase font-bold">MY <span className="text-red-500">Projects {projects.length}</span></h3>
+        </div>
+        <Carousel
           responsive={responsive}
-          autoPlay={true} 
-          autoPlaySpeed={3000} 
+          autoPlay={true}
+          autoPlaySpeed={3000}
           className="w-full"
           itemClass="carousel-item-padding-10"
         >
           {
-            projects.map((pro)=>{
-              return(
-                  <CardProjects pro={pro}/>
+            projects.map((pro ,index) => {
+              return (
+                <SwiperSlide key={index} className="md:w-[25rem] w-[20rem] overflow-hidden md:h-[45rem] h-[30rem]">
+                  <CardProjects pro={pro} />
+                </SwiperSlide>
               )
             })
           }
         </Carousel>
-      </div>
-    </section>
+       </div>
+      </section>
     </>
   )
 }
+
+
+
+

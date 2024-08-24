@@ -10,7 +10,7 @@ export const Section = ({navup}) => {
     loop: {},
   })
   
-  // const cv = useSelector(state => state.cv[0][0])
+// const cv = useSelector(state => state.cv[0][0])
 
 
   const linkdin = ()=>{
@@ -21,26 +21,20 @@ export const Section = ({navup}) => {
   return (
     <>
     <section ref={navup} className="secte min-h-[100vh]  flex items-center gap-10  md:flex-row flex-col pt-36 seimg px-10 py-10 relative z-40 w-full">
-        <div className="wfull md:w-1/2 w-full flex items-center p-20 flex-col">
-          <div>
-            <motion.img animate={{width:"18rem",height:"18rem"}} transition={{duration:1,delay:0.9}} className="w-[0rem] h-[0rem]" src={require("../image/Animation - 1716896686567.gif")} alt="" />
-          </div>
-          <div className="space-y-10 overflow-hidden relative">
-            <motion.h1 animate={{top:0 , opacity:1}} transition={{duration:0.8,delay:1.3}} className="text-4xl uppercase font-bold relative top-[-10rem] opacity-0 w-fit">
-                Hi,Hamza <span>{text}</span>
-                  <Cursor cursorColor='green' cursorStyle="__" />
+        <div className="md:w-1/2 w-full flex items-start md:items-center p-20 flex-col">
+          <div className="md:space-y-10 space-y-5 overflow-hidden relative">
+            <motion.h1 animate={{top:0 , opacity:1}} transition={{duration:0.8,delay:1.3}} className="md:text-4xl text-xl uppercase font-bold relative top-[-10rem] opacity-0 w-fit">
+              HELLO MY NAME IS, <span className="text-red-500"> Hamza {text}</span>
+                  <Cursor cursorColor='red' cursorStyle="__" />
             </motion.h1>
             <div>
-              <motion.p animate={{opacity:1}} transition={{duration:0.8,delay:1.8}} className="text-xl capitalize opacity-0">
+              <motion.p animate={{opacity:0.8}} transition={{duration:0.8,delay:1.8}} className="md:text-xl text-sm capitalize opacity-0 line-clamp-5">
               I'm a Developer web designer with a mission to create delightful and intuitive digital experiences. With a strong foundation in design principles and a keen eye for detail, I specialize in translating complex ideas into user-friendly interfaces that captivate and engage.</motion.p>
             </div>
             <div className="overflow-hidden">
-              <motion.div animate={{left:0}} transition={{duration:0.8,delay:1.9}} className="py-6 px-11 text-xl font-bold cursor-pointer hover:shadow-2xl hover:shadow-blue-900 rounded-lg uppercase bg-blue-500 md:w-fit w-full md:text-left text-center relative left-[80rem]" onClick={linkdin}>Download Cv</motion.div>
+              <motion.div animate={{left:0}} transition={{duration:0.8,delay:1.9}} className="md:py-6 md:px-11 px-6 py-3 md:text-xl text-sm font-bold cursor-pointer hover:shadow-2xl hover:shadow-blue-900 rounded-lg uppercase bg-red-500 md:w-fit w-full md:text-left text-center relative left-[80rem] hover:bg-white hover:text-red-500" onClick={linkdin}>Show linkdin</motion.div>
             </div>
           </div>
-        </div>
-        <div className="wfull md:w-1/2   h-[40rem] w-[40rem] p-8">
-          <img className="w-full h-full rounded-xl" src={require("../image/User.jpg")}  alt="anime" />
         </div>
     </section>
     </>
