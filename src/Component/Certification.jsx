@@ -50,7 +50,7 @@ export const Certification = ({certifi}) => {
   return (
     <>
     <section className="py-32 bg-black" ref={certifi}>
-        <div className="container mx-auto flex flex-col gap-16" ref={crad}>
+        <div className="md:container w-[90%] mx-auto flex flex-col gap-16" ref={crad}>
             <div className="text-center">
                 <h1 className="text-5xl uppercase font-bold">My <span className="text-red-600">Certification</span><span> {certification.length}</span></h1>
             </div>

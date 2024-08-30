@@ -22,7 +22,7 @@ export const CardProjects = ({pro}) => {
         <div className='h-[30rem] w-full overflow-hidden'>
             <img src={urlFor(pro.mainImage.asset._ref)} className='rounded-lg w-full h-full  transition duration-300 transform hover:scale-125 z-30' alt={pro.title && "Card"} />
         </div>
-        <div className="flex py-1 px-2 md:px-5 justify-between md:flex-row  md:gap-4 gap-2 items-center">
+        <div className="flex py-1 px-2 md:px-5 justify-between md:flex-row  md:gap-4 gap-4 items-center flex-wrap">
             <div className="left-0 cursor-pointer  rounded-xl  uppercase font-bold hover:text-red-500  w-fit" onClick={githup}>
                 <div >Show Code In githup</div>
                 <div className=" w-full h-[2px] bg-red-600  rounded-full"></div>

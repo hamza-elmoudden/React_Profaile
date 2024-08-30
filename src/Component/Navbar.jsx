@@ -1,12 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars,faX } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faLinkedin, faInstagram, faKaggle, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 
 
 export const Navbar = ({ skill, project, certifi, nev ,contect}) => {
+
+  const [show,setshow ]= useState(false)
 
 const githup = ()=>{
       window.open('https://github.com/hamza-elmoudden' , '_blank')
@@ -27,6 +30,8 @@ const kaggle = ()=>{
 const MoveNave = () => {
     const bar = document.querySelector(".navbar")
     bar.classList.toggle("movenav")
+
+    !show ? setshow(true) : setshow(false)  
 }
 
 
@@ -58,7 +63,7 @@ const MoveNave = () => {
               </div>
             </div>
             <div className="flex items-center justify-center cursor-pointer text-right" onClick={MoveNave}>
-              <FontAwesomeIcon className=" list" icon={faBars} />
+              {!show ? <FontAwesomeIcon className=" list" icon={faBars} /> : <FontAwesomeIcon icon={faX} />}
             </div>
           </nav>
         </div>
